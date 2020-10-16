@@ -1,0 +1,25 @@
+{
+  "name": "peachy-kleen",
+  "version": "1.0.0",
+  "description": "Landing page for Peachy Kleen cleaning service",
+  "main": "index.html",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
+		"compile:sass": "node-sass sass/main.scss css/styles.comp.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OleDakotaJoe/peachy-kleen.git"
+  },
+  "author": "Steven Sheaves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OleDakotaJoe/peachy-kleen/issues"
+  },
+  "homepage": "https://github.com/OleDakotaJoe/peachy-kleen#readme"
+}

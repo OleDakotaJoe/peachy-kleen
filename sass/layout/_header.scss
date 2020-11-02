@@ -1,0 +1,78 @@
+.header {
+	&__navbar {
+		z-index: 1000;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		display: flex;
+		//changing navbar-height variable in variables.scss changes margin top on banner image as well
+		height: $navbar-height;
+
+		flex-direction: row;
+		justify-content: center;
+		background-color: rgba($color-light-blue, 1);
+
+		&-brand {
+			display: flex;
+			padding: 1rem 0;
+
+			&--logo {
+				width: 6rem;
+				margin-right: 1rem;
+			}
+			&--name {
+				margin-top: auto;
+				margin-bottom: 1rem;
+				font-size: $font-size-l;
+				padding-right: 10rem;
+			}
+		}
+
+		&-menu {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			color: $color-dark-blue;
+			&--option {
+				padding: 0 3rem;
+				margin: auto 0;
+				font-size: $font-size-m;
+				line-height: 8.2rem;
+				width: 19rem;
+				text-align: center;
+				&,
+				& > a {
+					transition: all 0.2s linear;
+				}
+
+				&:hover {
+					border-right: $color-dark-blue solid 1px;
+					border-left: $color-dark-blue solid 1px;
+				}
+				&:not(:last-child):hover {
+					background-color: rgba($color-medium-blue, 0.5);
+				}
+
+				&:last-child {
+					background-color: rgba($color-medium-blue, 0.5);
+					&:hover {
+						background-color: rgba($color-medium-blue, 0.8);
+					}
+				}
+				&:hover > a {
+					border-bottom: $color-dark-blue solid 3px;
+				}
+			}
+
+			&--link,
+			&--link:link,
+			&--link:visited,
+			&--link:active {
+				text-decoration: none;
+				color: inherit;
+				padding-bottom: 1rem;
+			}
+		}
+	}
+}

@@ -1,0 +1,170 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.site-wrapper {
+  overflow-x: hidden; }
+
+.header__navbar {
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  height: 8.2rem;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #bcdbf1; }
+  .header__navbar-brand {
+    display: flex;
+    padding: 1rem 0; }
+    .header__navbar-brand--logo {
+      width: 6rem;
+      margin-right: 1rem; }
+    .header__navbar-brand--name {
+      margin-top: auto;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+      padding-right: 10rem; }
+  .header__navbar-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: #022546; }
+    .header__navbar-menu--option {
+      padding: 0 3rem;
+      margin: auto 0;
+      font-size: 2rem;
+      line-height: 8.2rem;
+      width: 19rem;
+      text-align: center; }
+      .header__navbar-menu--option,
+      .header__navbar-menu--option > a {
+        transition: all 0.2s linear; }
+      .header__navbar-menu--option:hover {
+        border-right: #022546 solid 1px;
+        border-left: #022546 solid 1px; }
+      .header__navbar-menu--option:not(:last-child):hover {
+        background-color: rgba(77, 181, 255, 0.5); }
+      .header__navbar-menu--option:last-child {
+        background-color: rgba(77, 181, 255, 0.5); }
+        .header__navbar-menu--option:last-child:hover {
+          background-color: rgba(77, 181, 255, 0.8); }
+      .header__navbar-menu--option:hover > a {
+        border-bottom: #022546 solid 3px; }
+    .header__navbar-menu--link, .header__navbar-menu--link:link, .header__navbar-menu--link:visited, .header__navbar-menu--link:active {
+      text-decoration: none;
+      color: inherit;
+      padding-bottom: 1rem; }
+
+.section-banner {
+  width: 100vw;
+  height: 42rem;
+  margin-top: 8.2rem;
+  background-image: url("../../assests/photos/pexels-mark-mccammon-2724749.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .section-banner__heading {
+    color: #022546;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 5px #f7f7f7; }
+    .section-banner__heading--container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(188, 219, 241, 0.6);
+      padding: 5rem 3rem;
+      box-shadow: 2px 2px 20px #022546; }
+    .section-banner__heading--main {
+      font-size: 6rem;
+      font-weight: 900; }
+    .section-banner__heading--sub {
+      font-size: 4rem; }
+
+.section-testimonials {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 10rem 0; }
+  .section-testimonials__card {
+    height: 45rem;
+    width: 40rem;
+    margin: auto 0;
+    border: 1px solid #022546;
+    box-shadow: 2px 2px 20px black;
+    overflow: hidden; }
+  .section-testimonials__quote {
+    position: relative;
+    display: block;
+    background-color: #f7f7f7;
+    height: 55%; }
+    .section-testimonials__quote--text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+      text-align: center; }
+  .section-testimonials__customer-image {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+  .section-testimonials__customer-details {
+    position: relative;
+    height: 46%;
+    border-top: 1px solid #022546; }
+    .section-testimonials__customer-details--1 {
+      background-color: #f3cbae; }
+    .section-testimonials__customer-details--2 {
+      background-color: #ed8b78; }
+    .section-testimonials__customer-details--3 {
+      background-color: #022546; }
+    .section-testimonials__customer-details--container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #022546;
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center; }
+      .section-testimonials__customer-details--container-3 {
+        color: #f7f7f7; }

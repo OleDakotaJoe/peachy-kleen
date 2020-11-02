@@ -1,0 +1,120 @@
+.section-banner {
+	width: 100vw;
+	height: 42rem;
+	margin-top: $navbar-height;
+	background-image: url("../../assests/photos/pexels-mark-mccammon-2724749.jpg");
+
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	&__heading {
+		color: $color-dark-blue;
+		font-size: $font-size-l;
+		text-align: center;
+		text-shadow: 1px 1px 5px $color-off-white;
+
+		&--container {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: rgba($color-light-blue, 0.6);
+			padding: 5rem 3rem;
+			box-shadow: 2px 2px 20px $color-dark-blue;
+		}
+		&--main {
+			font-size: $font-size-title;
+			font-weight: 900;
+		}
+		&--sub {
+			font-size: $font-size-4x;
+		}
+	}
+}
+
+.section-testimonials {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	padding: 10rem 0;
+	&__cleaning-girl {
+	}
+	&__card {
+		height: 45rem;
+		width: 40rem;
+		margin: auto 0;
+		border: 1px solid $color-dark-blue;
+		box-shadow: 2px 2px 20px black;
+		overflow: hidden;
+		&--1 {
+		}
+		&--2 {
+		}
+		&--3 {
+		}
+	}
+	&__quote {
+		position: relative;
+		display: block;
+		background-color: $color-off-white;
+		height: 55%;
+		&--text {
+			@include centered;
+			font-size: $font-size-s;
+			text-align: center;
+		}
+	}
+
+	&__customer {
+		&-image {
+			width: 10rem;
+			height: 10rem;
+			object-fit: cover;
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			&--1 {
+			}
+			&--2 {
+			}
+			&--3 {
+			}
+		}
+		&-details {
+			position: relative;
+			height: 46%;
+			border-top: 1px solid $color-dark-blue;
+
+			&--1 {
+				background-color: $color-peach;
+			}
+			&--2 {
+				background-color: $color-pink;
+			}
+			&--3 {
+				background-color: $color-dark-blue;
+			}
+			&--container {
+				@include centered;
+				color: $color-dark-blue;
+				font-size: $font-size-m;
+				font-weight: 700;
+				text-align: center;
+				&-1 {
+				}
+				&-2 {
+				}
+				&-3 {
+					color: $color-off-white;
+				}
+			}
+			&--name {
+			}
+			&--package {
+			}
+		}
+	}
+}

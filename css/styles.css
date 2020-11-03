@@ -168,3 +168,62 @@ table {
       text-align: center; }
       .section-testimonials__customer-details--container-3 {
         color: #f7f7f7; }
+
+.section-services {
+  display: flex;
+  flex-direction: column;
+  margin: 10rem auto;
+  padding: 5rem 0;
+  background-color: #bcdbf1;
+  box-shadow: 0px 0px 10px black; }
+  .section-services__heading {
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .section-services__container {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+  .section-services__services-list {
+    display: flex;
+    flex-direction: column; }
+  .section-services__services-offered {
+    display: flex; }
+    .section-services__services-offered--right {
+      flex-direction: row-reverse; }
+  .section-services__services-title {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+    .section-services__services-title--left {
+      margin-left: auto; }
+    .section-services__services-title--right {
+      margin-right: auto; }
+  .section-services__description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25rem; }
+  .section-services__services-description {
+    font-size: 1.2rem; }
+    .section-services__services-description--left {
+      text-align: right; }
+    .section-services__services-description--right {
+      text-align: left; }
+  .section-services__icon-container {
+    width: 12rem;
+    height: 12rem;
+    background-color: #022546;
+    margin: 2rem;
+    position: relative; }
+    .section-services__icon-container--img {
+      width: 8rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }

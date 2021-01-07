@@ -1,0 +1,81 @@
+.footer {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	height: 50rem;
+	background-color: $color-light-blue;
+	border-top: 2px solid $color-dark-blue;
+	&__top-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		width: 100vw;
+	}
+
+	&__logo {
+		&--container {
+			margin-top: 8rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		&--img {
+			width: 15rem;
+		}
+		&--brand {
+			font-size: $font-size-4x;
+		}
+	}
+	&__bottom-container {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 8rem;
+		font-size: $font-size-m;
+		font-family: $sans-serif;
+		color: $color-dark-blue;
+	}
+	&__nav {
+		&--container {
+			width: 40vw;
+			border-top: 2px solid $color-pink;
+		}
+		&--list {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+		}
+		&--item {
+			padding: 2rem;
+			text-transform: uppercase;
+		}
+		&--link {
+			&,
+			&:link,
+			&:visited {
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__copyright {
+		&--container {
+			text-align: center;
+			width: 40vw;
+			border-top: 2px solid $color-pink;
+		}
+		&--details {
+			color: inherit;
+			padding: 2rem;
+		}
+		&--author {
+			&,
+			&:link,
+			&:visited {
+				color: $color-pink;
+				text-decoration: none;
+			}
+		}
+	}
+}

@@ -41,3 +41,31 @@ table {
 .site-wrapper {
 	overflow-x: hidden;
 }
+@include respond(laptop){
+	html {
+		font-size: 50%;
+	}
+}
+
+@include respond(tab-land){
+	html {
+		font-size: 40%;
+	}
+}
+@include respond(tab-port){
+	html {
+		font-size: 30%;
+	}
+}
+
+@include respond(phone){
+
+}
+
+@include respond(small-phone){
+
+}
+
+@include respond(big-desktop){
+
+}

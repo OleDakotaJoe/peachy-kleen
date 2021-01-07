@@ -12,10 +12,17 @@
 		flex-direction: row;
 		justify-content: center;
 		background-color: rgba($color-light-blue, 1);
+		border-bottom: 2px solid $color-dark-blue;
+		@include respond(phone) {
+			flex-direction: column;
+		}
 
 		&-brand {
 			display: flex;
 			padding: 1rem 0;
+			@include respond(phone) {
+				padding-left: 2rem;
+			}
 
 			&--logo {
 				width: 6rem;
@@ -29,18 +36,140 @@
 			}
 		}
 
+		&-hamburger-button {
+			&--container {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 60px;
+				height: 40px;
+			}
+			&--button {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 20px;
+				background-color: $color-dark-blue;
+				height: 2px;
+				display: none;
+				z-index: 900;
+
+				@include respond(phone) {
+					display: block;
+				}
+				&::before {
+					position: absolute;
+					transform: translateY(-6px);
+					right: 0;
+					content: "";
+					background-color: $color-dark-blue;
+					height: 2px;
+					width: 20px;
+					transition: all 0.2s;
+				}
+				&::after {
+					position: absolute;
+					transform: translateY(6px);
+					right: 0;
+					content: "";
+					background-color: $color-dark-blue;
+					height: 2px;
+					width: 20px;
+					transition: all 0.2s;
+				}
+			}
+
+			&--checkbox {
+				display: none;
+				&-label {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 50px;
+					height: 50px;
+					z-index: 1000;
+				}
+			}
+
+			&--checkbox:checked ~ &--button {
+				visibility: hidden;
+			}
+			&--checkbox:checked ~ &--button::before {
+				visibility: visible;
+				top: 0;
+				transform: rotate(225deg);
+			}
+			&--checkbox:checked ~ &--button::after {
+				visibility: visible;
+				top: 0;
+				transform: rotate(-225deg);
+			}
+		}
+
 		&-menu {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			color: $color-dark-blue;
+			transition: all 0.4s;
+			z-index: 1000;
+
+			@include respond(phone) {
+				opacity: 0;
+				display: flex;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(100%, -100%);
+				flex-direction: column;
+			}
+
+			&--active {
+				transform: translate(-50%, 50%);
+				flex-direction: column;
+				display: flex;
+				opacity: 1;
+			}
+
+			&-backdrop {
+				position: absolute;
+				top: 0;
+				right: 0;
+				background: radial-gradient(
+					circle,
+					$color-light-blue 0%,
+					$color-medium-blue 40%,
+					$color-medium-blue 100%
+				);
+				clip-path: circle(50px);
+				width: 100px;
+				height: 100px;
+				opacity: 0;
+				z-index: 800;
+				transition: all 0.4s;
+
+				&--active {
+					transform: scale(20);
+					opacity: 1;
+				}
+			}
 			&--option {
 				padding: 0 3rem;
 				margin: auto 0;
 				font-size: $font-size-m;
 				line-height: 8.2rem;
-				width: 19rem;
+				width: 20rem;
 				text-align: center;
+				text-transform: uppercase;
+				font-family: $sans-serif;
+				@include respond(phone) {
+					font-size: $font-size-4x;
+					width: 40rem;
+					line-height: 3;
+				}
+
 				&,
 				& > a {
 					transition: all 0.2s linear;
@@ -49,19 +178,34 @@
 				&:hover {
 					border-right: $color-dark-blue solid 1px;
 					border-left: $color-dark-blue solid 1px;
+					@include respond(phone) {
+						border: none;
+					}
 				}
 				&:not(:last-child):hover {
 					background-color: rgba($color-medium-blue, 0.5);
+					@include respond(phone) {
+						background-color: transparent;
+					}
 				}
 
 				&:last-child {
 					background-color: rgba($color-medium-blue, 0.5);
+					@include respond(phone) {
+						background-color: transparent;
+					}
 					&:hover {
 						background-color: rgba($color-medium-blue, 0.8);
+						@include respond(phone) {
+							background-color: transparent;
+						}
 					}
 				}
 				&:hover > a {
 					border-bottom: $color-dark-blue solid 3px;
+					@include respond(phone) {
+						border: none;
+					}
 				}
 			}
 

@@ -9,9 +9,10 @@
 	position: relative;
 
 	&__heading {
-		color: $color-dark-blue;
-		font-size: $font-size-l;
 		text-align: center;
+		font-size: $font-size-l;
+		font-family: $serif;
+		color: $color-dark-blue;
 		text-shadow: 1px 1px 5px $color-off-white;
 
 		&--container {
@@ -25,10 +26,11 @@
 		}
 		&--main {
 			font-size: $font-size-title;
-			font-weight: 900;
+			font-weight: 100;
 		}
 		&--sub {
-			font-size: $font-size-4x;
+			font-size: $font-size-xxl;
+			font-weight: 100;
 		}
 	}
 }
@@ -39,13 +41,26 @@
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 
+	@include respond(phone) {
+		flex-direction: column;
+		align-content: center;
+	}
+
 	padding: 10rem 0;
 	&__cleaning-girl {
+		&--container {
+			width: 40rem;
+			height: 45rem;
+			margin: 1rem;
+		}
+		&--image {
+			max-height: 50rem;
+		}
 	}
 	&__card {
 		height: 45rem;
 		width: 40rem;
-		margin: auto 0;
+		margin: 3rem 1rem;
 		border: 1px solid $color-dark-blue;
 		box-shadow: 2px 2px 20px black;
 		overflow: hidden;
@@ -87,6 +102,9 @@
 			position: relative;
 			height: 46%;
 			border-top: 1px solid $color-dark-blue;
+			font-family: $sans-serif;
+			color: $color-dark-blue;
+			font-weight: 100;
 
 			&--1 {
 				background-color: $color-peach;
@@ -99,9 +117,6 @@
 			}
 			&--container {
 				@include centered;
-				color: $color-dark-blue;
-				font-size: $font-size-m;
-				font-weight: 700;
 				text-align: center;
 				&-1 {
 				}
@@ -112,8 +127,10 @@
 				}
 			}
 			&--name {
+				font-size: $font-size-m;
 			}
 			&--package {
+				font-size: $font-size-s;
 			}
 		}
 	}
@@ -124,16 +141,18 @@
 	flex-direction: column;
 	margin: 10rem auto;
 	padding: 5rem 0;
+	font-family: $sans-serif;
 	background-color: rgba($color-light-blue, 1);
 	box-shadow: 0px 0px 10px black;
+	color: $color-pink;
 
 	&__heading {
-		font-size: $font-size-4x;
-		text-align: center;
 		margin-top: 5rem;
-		margin-bottom: 5rem;
-		font-weight: 700;
+		margin-bottom: 3rem;
+		text-align: center;
 		text-transform: uppercase;
+		font-size: $font-size-4x;
+		font-weight: 500;
 	}
 	&__container {
 		width: 100vw;
@@ -182,7 +201,9 @@
 		}
 	}
 	&__services-description {
-		font-size: $font-size-xs;
+		font-size: $font-size-s;
+		color: $color-dark-blue;
+
 		&--left {
 			text-align: right;
 		}
@@ -192,14 +213,106 @@
 	}
 
 	&__icon-container {
+		position: relative;
+		margin: 2rem;
 		width: 12rem;
 		height: 12rem;
 		background-color: $color-dark-blue;
-		margin: 2rem;
-		position: relative;
+		transition: all 0.2s ease-out;
+		cursor: pointer;
+		box-shadow: 0 0 25px black;
+
+		&:hover {
+			background-color: $color-pink;
+			transform: scale(1.1);
+		}
 		&--img {
 			width: 8rem;
 			@include centered;
+		}
+	}
+}
+
+.section-comparison {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 auto;
+	margin-bottom: 30rem;
+
+	&__heading {
+		font-size: $font-size-4x;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		color: $color-dark-blue;
+		margin: 8rem 0 12rem;
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: row;
+		justify-content: start;
+		width: 80vw;
+	}
+	&__photos-container {
+		position: relative;
+		transform: translate(0, -20%);
+	}
+
+	&__description {
+		font-family: $sans-serif;
+		color: $color-dark-blue;
+		&--container {
+			margin-right: 12rem;
+		}
+		&--heading {
+			margin-left: 8rem;
+			font-size: $font-size-l;
+			text-transform: uppercase;
+		}
+		&--details {
+			width: 55rem;
+			font-size: $font-size-m;
+			margin: 3rem 0 0 8rem;
+			&:not(:last-child) {
+				margin-bottom: 8rem;
+			}
+		}
+	}
+
+	&__img {
+		width: 36rem;
+		height: 24rem;
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		box-shadow: -10px 0px 30px black;
+		transition: all 0.1s linear;
+		&:hover {
+			outline: 5px solid $color-pink;
+			z-index: 700;
+			outline-offset: 2rem;
+			box-shadow: -10px 0px 100px black;
+			transform: scale(1.1);
+		}
+
+		&--1 {
+			top: 17rem;
+			left: 10rem;
+			background-image: url(../../assests/photos/living-room.jpg);
+			z-index: 600;
+		}
+
+		&--2 {
+			top: 6rem;
+			left: 25rem;
+			background-image: url(../../assests/photos/fridge.jpg);
+			z-index: 500;
+		}
+		&--3 {
+			top: 2rem;
+			background-image: url(../../assests/photos/kitchen.jpg);
+			z-index: 400;
 		}
 	}
 }

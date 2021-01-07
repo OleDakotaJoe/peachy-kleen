@@ -9,7 +9,7 @@
 	<body>
 		<!-- Site Wrapper is to hide overflow -->
 		<div class="site-wrapper">
-			<header class="header">
+			<header class="header" role="navigation">
 				<nav class="header__navbar">
 					<div class="header__navbar-brand">
 						<img
@@ -19,7 +19,7 @@
 						/>
 						<h1 class="header__navbar-brand--name">Peachy Kleen</h1>
 					</div>
-					<ul class="header__navbar-menu">
+					<ul class="header__navbar-menu" id="navbar-menu">
 						<li class="header__navbar-menu--option">
 							<a href="#" class="header__navbar-menu--link">Expert Services</a>
 						</li>
@@ -37,9 +37,22 @@
 							<a href="#" class="header__navbar-menu--link">Get an Estimate</a>
 						</li>
 					</ul>
+					<div class="header__navbar-hamburger-button--container">
+						<input
+							class="header__navbar-hamburger-button--checkbox"
+							type="checkbox"
+							id="menu-button"
+						/>
+						<label
+							class="header__navbar-hamburger-button--checkbox-label"
+							for="menu-button"
+						></label>
+						<div class="header__navbar-hamburger-button--button">&nbsp;</div>
+					</div>
+					<div class="header__navbar-menu-backdrop" id="menu-backdrop"></div>
 				</nav>
 			</header>
-			<section class="section-banner">
+			<section class="section-banner" role="banner">
 				<div class="section-banner__heading section-banner__heading--container">
 					<h1 class="section-banner__heading--main">Let us do the cleaning</h1>
 					<h2 class="section-banner__heading section-banner__heading--sub">
@@ -47,12 +60,16 @@
 					</h2>
 				</div>
 			</section>
-			<section class="section-testimonials">
-				<img
-					src="./assests/photos/cleaning-girl.png"
-					alt="cleaning girl"
-					class="section-testimonials__cleaning-girl"
-				/>
+			<section class="section-testimonials" role="complementary">
+				<div
+					class="section-testimonials__cleaning-girl section-testimonials__cleaning-girl--container"
+				>
+					<img
+						src="./assests/photos/cleaning-girl.png"
+						alt="cleaning girl"
+						class="section-testimonials__cleaning-girl--image"
+					/>
+				</div>
 
 				<div class="section-testimonials__card section__testimonials__card--1">
 					<div class="section-testimonials__quote">
@@ -143,7 +160,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="section-services">
+			<section class="section-services" role="main">
 				<h1 class="section-services__heading" id="services">Services</h1>
 				<div class="section-services__container">
 					<div
@@ -324,6 +341,108 @@
 					</div>
 				</div>
 			</section>
+			<secton class="section-comparison" role="complementary">
+				<!-- <div id="comparison" onmousemove="moveDivisor(event)">
+					<figure>
+						<div id="divisor"></div>
+					</figure>
+				</div> -->
+
+				<h2 class="section-comparison__heading">
+					Superior Results for Amazing People
+				</h2>
+				<div class="section-comparison__container">
+					<div
+						class="section-comparison__description section-comparison__description--container"
+					>
+						<h3
+							class="section-comparison__description section-comparison__description--heading"
+						>
+							Lorem, ipsum dolor sit amet consectetur
+						</h3>
+						<p
+							class="section-comparison__description section-comparison__description--details"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Recusandae explicabo ad optio, vero saepe laborum sequi, tenetur
+							esse perspiciatis quo ipsa ullam hic earum laboriosam id fugiat
+							minus totam dolor.
+						</p>
+						<h3
+							class="section-comparison__description section-comparison__description--heading"
+						>
+							Lorem, ipsum dolor sit amet consectetur
+						</h3>
+						<p
+							class="section-comparison__description section-comparison__description--details"
+						>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit.
+							Recusandae explicabo ad optio, vero saepe laborum sequi, tenetur
+							esse perspiciatis quo ipsa ullam hic earum laboriosam id fugiat
+							minus totam dolor.
+						</p>
+					</div>
+					<div class="section-comparison__photos-container">
+						<div></div>
+						<div
+							class="section-comparison__img section-comparison__img--1"
+						></div>
+						<div
+							class="section-comparison__img section-comparison__img--2"
+						></div>
+						<div
+							class="section-comparison__img section-comparison__img--3"
+						></div>
+					</div>
+				</div>
+			</secton>
+
+			<section class="section-contact"></section>
+			<footer class="footer">
+				<div class="footer__top-container">
+					<div class="footer__logo--container">
+						<img
+							src="./assests/logo/logo.png"
+							alt="Peachy Kleen Logo"
+							class="footer__logo--img"
+						/>
+						<h1 class="footer__logo--brand">Peachy Kleen</h1>
+					</div>
+				</div>
+				<div class="footer__bottom-container">
+					<div class="footer__nav--container">
+						<ul class="footer__nav--list">
+							<li class="footer__nav--item">
+								<a href="#" class="footer__nav--link">Expert Services</a>
+							</li>
+							<li class="footer__nav--item">
+								<a href="#" class="footer__nav--link">Testimonials</a>
+							</li>
+							<li class="footer__nav--item">
+								<a href="#" class="footer__nav--link">Contact</a>
+							</li>
+							<li class="footer__nav--item">
+								<a href="#" class="footer__nav--link">About</a>
+							</li>
+							<li class="footer__nav--item">
+								<a href="#" class="footer__nav--link">Get an Estimate</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__copyright--container">
+						<p class="footer__copyright--details">
+							Copyright &copy;Peachy Kleen, 2020. Site designed and built by
+							<a
+								href="https://stevensheaves.me"
+								class="footer__copyright--author"
+							>
+								Steven Sheaves</a
+							>
+						</p>
+					</div>
+				</div>
+			</footer>
 		</div>
+		<script src="./scripts/navbar-menu.js"></script>
 	</body>
 </html>

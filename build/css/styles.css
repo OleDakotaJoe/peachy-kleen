@@ -94,15 +94,19 @@ table {
 
 @font-face {
   font-family: "Oswald";
-  src: url("../../assests/fonts/oswald/Oswald-VariableFont_wght.ttf") format("truetype"); }
+  src: url("../assests/fonts/oswald/Oswald-VariableFont_wght.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Raleway";
-  src: url("../../assests/fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype"); }
+  src: url("../assests/fonts/raleway/Raleway-VariableFont_wght.ttf") format("truetype"); }
 
 @font-face {
   font-family: "Playfair";
-  src: url("../../assests/fonts/playfair/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); }
+  src: url("../assests/fonts/playfair/PlayfairDisplay-VariableFont_wght.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Rainydays";
+  src: url("../assests/fonts/rainydays/rainydays.ttf") format("truetype"); }
 
 div#comparison {
   width: 60vw;
@@ -162,7 +166,11 @@ div#comparison figure div {
       margin-top: auto;
       margin-bottom: 1rem;
       font-size: 2.5rem;
-      padding-right: 10rem; }
+      padding-right: 10rem;
+      font-family: "Rainydays", "Playfair", "Times New Roman", Merriweather, serif; }
+      @media (max-width: 37.5em) {
+        .header__navbar-brand--name {
+          font-size: 3.5rem; } }
   .header__navbar-hamburger-button--container {
     position: absolute;
     top: 0;
@@ -323,7 +331,8 @@ div#comparison figure div {
   .footer__logo--img {
     width: 15rem; }
   .footer__logo--brand {
-    font-size: 4rem; }
+    font-size: 4rem;
+    font-family: "Rainydays", "Playfair", "Times New Roman", Merriweather, serif; }
   .footer__bottom-container {
     display: flex;
     flex-direction: row;
@@ -339,9 +348,21 @@ div#comparison figure div {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+    @media (max-width: 37.5em) {
+      .footer__nav--list {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 10rem;
+        line-height: 1; } }
   .footer__nav--item {
     padding: 2rem;
     text-transform: uppercase; }
+    @media (max-width: 56.25em) {
+      .footer__nav--item {
+        padding: 1rem; } }
+    @media (max-width: 37.5em) {
+      .footer__nav--item {
+        padding: 0; } }
   .footer__nav--link, .footer__nav--link:link, .footer__nav--link:visited {
     color: inherit;
     text-decoration: none; }
@@ -389,12 +410,14 @@ div#comparison figure div {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex: 1 0 50%;
   padding: 10rem 0; }
   @media (max-width: 37.5em) {
     .section-testimonials {
-      flex-direction: column;
-      align-content: center; } }
+      flex-direction: column-reverse;
+      align-content: center;
+      align-items: center; } }
   .section-testimonials__cleaning-girl--container {
     width: 40rem;
     height: 45rem;
@@ -408,6 +431,10 @@ div#comparison figure div {
     border: 1px solid #022546;
     box-shadow: 2px 2px 20px black;
     overflow: hidden; }
+    @media (max-width: 37.5em) {
+      .section-testimonials__card {
+        width: 52rem;
+        height: 58.5rem; } }
   .section-testimonials__quote {
     position: relative;
     display: block;
@@ -420,6 +447,11 @@ div#comparison figure div {
       transform: translate(-50%, -50%);
       font-size: 1.5rem;
       text-align: center; }
+      @media (max-width: 37.5em) {
+        .section-testimonials__quote--text {
+          font-size: 2rem;
+          font-weight: 100;
+          padding-bottom: 6rem; } }
   .section-testimonials__customer-image {
     width: 10rem;
     height: 10rem;
@@ -427,6 +459,10 @@ div#comparison figure div {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (max-width: 37.5em) {
+      .section-testimonials__customer-image {
+        width: 13rem;
+        height: 13rem; } }
   .section-testimonials__customer-details {
     position: relative;
     height: 46%;
@@ -450,8 +486,14 @@ div#comparison figure div {
         color: #f7f7f7; }
     .section-testimonials__customer-details--name {
       font-size: 2rem; }
+      @media (max-width: 37.5em) {
+        .section-testimonials__customer-details--name {
+          font-size: 3rem; } }
     .section-testimonials__customer-details--package {
       font-size: 1.5rem; }
+      @media (max-width: 37.5em) {
+        .section-testimonials__customer-details--package {
+          font-size: 2.5rem; } }
 
 .section-services {
   display: flex;
@@ -474,11 +516,21 @@ div#comparison figure div {
     display: flex;
     flex-direction: row;
     justify-content: center; }
+    @media (max-width: 37.5em) {
+      .section-services__container {
+        flex-direction: column;
+        align-items: center; } }
   .section-services__services-list {
     display: flex;
     flex-direction: column; }
   .section-services__services-offered {
     display: flex; }
+    @media (max-width: 37.5em) {
+      .section-services__services-offered {
+        margin-bottom: 2rem; } }
+    @media (max-width: 37.5em) {
+      .section-services__services-offered--left {
+        flex-direction: row-reverse; } }
     .section-services__services-offered--right {
       flex-direction: row-reverse; }
   .section-services__services-title {
@@ -486,8 +538,14 @@ div#comparison figure div {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase; }
+    @media (max-width: 37.5em) {
+      .section-services__services-title {
+        font-size: 2.5rem; } }
     .section-services__services-title--left {
       margin-left: auto; }
+      @media (max-width: 37.5em) {
+        .section-services__services-title--left {
+          margin-left: 0; } }
     .section-services__services-title--right {
       margin-right: auto; }
   .section-services__description-container {
@@ -495,11 +553,20 @@ div#comparison figure div {
     flex-direction: column;
     justify-content: center;
     width: 25rem; }
+    @media (max-width: 37.5em) {
+      .section-services__description-container {
+        width: 33rem; } }
   .section-services__services-description {
     font-size: 1.5rem;
     color: #022546; }
+    @media (max-width: 37.5em) {
+      .section-services__services-description {
+        font-size: 2rem; } }
     .section-services__services-description--left {
       text-align: right; }
+      @media (max-width: 37.5em) {
+        .section-services__services-description--left {
+          text-align: left; } }
     .section-services__services-description--right {
       text-align: left; }
   .section-services__icon-container {
@@ -511,6 +578,10 @@ div#comparison figure div {
     transition: all 0.2s ease-out;
     cursor: pointer;
     box-shadow: 0 0 25px black; }
+    @media (max-width: 37.5em) {
+      .section-services__icon-container {
+        width: 15rem;
+        height: 15rem; } }
     .section-services__icon-container:hover {
       background-color: #ed8b78;
       transform: scale(1.1); }
@@ -527,6 +598,9 @@ div#comparison figure div {
   align-items: center;
   padding: 0 auto;
   margin-bottom: 30rem; }
+  @media (max-width: 37.5em) {
+    .section-comparison {
+      margin-bottom: 50rem; } }
   .section-comparison__heading {
     font-size: 4rem;
     text-transform: uppercase;
@@ -538,9 +612,15 @@ div#comparison figure div {
     flex-direction: row;
     justify-content: start;
     width: 80vw; }
+    @media (max-width: 37.5em) {
+      .section-comparison__container {
+        flex-direction: column; } }
   .section-comparison__photos-container {
     position: relative;
     transform: translate(0, -20%); }
+    @media (max-width: 37.5em) {
+      .section-comparison__photos-container {
+        transform: translate(10%, 10%); } }
   .section-comparison__description {
     font-family: "Oswald", "Raleway", Helvectica, sans-serif;
     color: #022546; }
@@ -564,6 +644,10 @@ div#comparison figure div {
     position: absolute;
     box-shadow: -10px 0px 30px black;
     transition: all 0.1s linear; }
+    @media (max-width: 37.5em) {
+      .section-comparison__img {
+        width: 32.4rem;
+        height: 21.6rem; } }
     .section-comparison__img:hover {
       outline: 5px solid #ed8b78;
       z-index: 700;
@@ -573,14 +657,26 @@ div#comparison figure div {
     .section-comparison__img--1 {
       top: 17rem;
       left: 10rem;
-      background-image: url(../../assests/photos/living-room.jpg);
+      background-image: url(../assests/photos/living-room.jpg);
       z-index: 600; }
+      @media (max-width: 37.5em) {
+        .section-comparison__img--1 {
+          top: 17rem;
+          left: 10rem; } }
     .section-comparison__img--2 {
-      top: 6rem;
-      left: 25rem;
-      background-image: url(../../assests/photos/fridge.jpg);
+      top: 8rem;
+      left: 35rem;
+      background-image: url(../assests/photos/fridge.jpg);
       z-index: 500; }
+      @media (max-width: 37.5em) {
+        .section-comparison__img--2 {
+          top: 6rem;
+          left: 25rem; } }
     .section-comparison__img--3 {
       top: 2rem;
-      background-image: url(../../assests/photos/kitchen.jpg);
+      background-image: url(../assests/photos/kitchen.jpg);
       z-index: 400; }
+      @media (max-width: 37.5em) {
+        .section-comparison__img--3 {
+          top: 10rem;
+          left: -2rem; } }

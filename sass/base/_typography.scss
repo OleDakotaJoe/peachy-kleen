@@ -1,22 +1,28 @@
 @font-face {
 	font-family: "Oswald";
-	src: url("../../assests/fonts/oswald/Oswald-VariableFont_wght.ttf")
+	src: url("../assests/fonts/oswald/Oswald-VariableFont_wght.ttf")
 		format("truetype");
 }
 
 @font-face {
 	font-family: "Raleway";
-	src: url("../../assests/fonts/raleway/Raleway-VariableFont_wght.ttf")
+	src: url("../assests/fonts/raleway/Raleway-VariableFont_wght.ttf")
 		format("truetype");
 }
 
 @font-face {
 	font-family: "Playfair";
-	src: url("../../assests/fonts/playfair/PlayfairDisplay-VariableFont_wght.ttf")
+	src: url("../assests/fonts/playfair/PlayfairDisplay-VariableFont_wght.ttf")
 		format("truetype");
+}
+
+@font-face {
+	font-family: "Rainydays";
+	src: url("../assests/fonts/rainydays/rainydays.ttf") format("truetype");
 }
 
 //-------------FONT FAMILY VARIABLES------------//
 
 $sans-serif: "Oswald", "Raleway", Helvectica, sans-serif;
 $serif: "Playfair", "Times New Roman", Merriweather, serif;
+$brand: "Rainydays", $serif;

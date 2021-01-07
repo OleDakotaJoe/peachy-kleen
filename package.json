@@ -9,8 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:sass": "node-sass sass/main.scss css/styles.css -w",
-		"compile:sass": "node-sass sass/main.scss css/styles.comp.css"
+    "watch:sass": "node-sass sass/main.scss build/css/styles.css -w",
+		"compile:sass": "node-sass sass/main.scss build/css/styles.comp.css"
   },
   "repository": {
     "type": "git",

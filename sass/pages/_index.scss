@@ -39,11 +39,13 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	flex-wrap: wrap;
+	flex-wrap: nowrap;
+	flex: 1 0 50%;
 
 	@include respond(phone) {
-		flex-direction: column;
+		flex-direction: column-reverse;
 		align-content: center;
+		align-items: center;
 	}
 
 	padding: 10rem 0;
@@ -64,6 +66,11 @@
 		border: 1px solid $color-dark-blue;
 		box-shadow: 2px 2px 20px black;
 		overflow: hidden;
+
+		@include respond(phone) {
+			width: 40 * 1.3rem;
+			height: 45 * 1.3rem;
+		}
 		&--1 {
 		}
 		&--2 {
@@ -80,6 +87,11 @@
 			@include centered;
 			font-size: $font-size-s;
 			text-align: center;
+			@include respond(phone) {
+				font-size: $font-size-m;
+				font-weight: 100;
+				padding-bottom: 6rem;
+			}
 		}
 	}
 
@@ -91,6 +103,10 @@
 			position: absolute;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			@include respond(phone) {
+				width: 13rem;
+				height: 13rem;
+			}
 			&--1 {
 			}
 			&--2 {
@@ -128,9 +144,15 @@
 			}
 			&--name {
 				font-size: $font-size-m;
+				@include respond(phone) {
+					font-size: $font-size-xl;
+				}
 			}
 			&--package {
 				font-size: $font-size-s;
+				@include respond(phone) {
+					font-size: $font-size-l;
+				}
 			}
 		}
 	}
@@ -159,6 +181,11 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+
+		@include respond(phone) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__services-list {
 		display: flex;
@@ -170,7 +197,13 @@
 	}
 	&__services-offered {
 		display: flex;
+		@include respond(phone) {
+			margin-bottom: 2rem;
+		}
 		&--left {
+			@include respond(phone) {
+				flex-direction: row-reverse;
+			}
 		}
 		&--right {
 			flex-direction: row-reverse;
@@ -181,8 +214,15 @@
 		font-size: $font-size-m;
 		font-weight: 700;
 		text-transform: uppercase;
+		@include respond(phone) {
+			font-size: $font-size-l;
+		}
+
 		&--left {
 			margin-left: auto;
+			@include respond(phone) {
+				margin-left: 0;
+			}
 		}
 		&--right {
 			margin-right: auto;
@@ -193,6 +233,9 @@
 		flex-direction: column;
 		justify-content: center;
 		width: 25rem;
+		@include respond(phone) {
+			width: 33rem;
+		}
 
 		&--left {
 		}
@@ -203,9 +246,15 @@
 	&__services-description {
 		font-size: $font-size-s;
 		color: $color-dark-blue;
+		@include respond(phone) {
+			font-size: $font-size-m;
+		}
 
 		&--left {
 			text-align: right;
+			@include respond(phone) {
+				text-align: left;
+			}
 		}
 		&--right {
 			text-align: left;
@@ -221,6 +270,11 @@
 		transition: all 0.2s ease-out;
 		cursor: pointer;
 		box-shadow: 0 0 25px black;
+
+		@include respond(phone) {
+			width: 15rem;
+			height: 15rem;
+		}
 
 		&:hover {
 			background-color: $color-pink;
@@ -240,6 +294,10 @@
 	padding: 0 auto;
 	margin-bottom: 30rem;
 
+	@include respond(phone) {
+		margin-bottom: 50rem;
+	}
+
 	&__heading {
 		font-size: $font-size-4x;
 		text-transform: uppercase;
@@ -253,10 +311,17 @@
 		flex-direction: row;
 		justify-content: start;
 		width: 80vw;
+
+		@include respond(phone) {
+			flex-direction: column;
+		}
 	}
 	&__photos-container {
 		position: relative;
 		transform: translate(0, -20%);
+		@include respond(phone) {
+			transform: translate(10%, 10%);
+		}
 	}
 
 	&__description {
@@ -288,6 +353,10 @@
 		position: absolute;
 		box-shadow: -10px 0px 30px black;
 		transition: all 0.1s linear;
+		@include respond(phone) {
+			width: 36 * 0.9rem;
+			height: 24 * 0.9rem;
+		}
 		&:hover {
 			outline: 5px solid $color-pink;
 			z-index: 700;
@@ -299,20 +368,32 @@
 		&--1 {
 			top: 17rem;
 			left: 10rem;
-			background-image: url(../../assests/photos/living-room.jpg);
+			background-image: url(../assests/photos/living-room.jpg);
 			z-index: 600;
+			@include respond(phone) {
+				top: 17rem;
+				left: 10rem;
+			}
 		}
 
 		&--2 {
-			top: 6rem;
-			left: 25rem;
-			background-image: url(../../assests/photos/fridge.jpg);
+			top: 8rem;
+			left: 35rem;
+			background-image: url(../assests/photos/fridge.jpg);
 			z-index: 500;
+			@include respond(phone) {
+				top: 6rem;
+				left: 25rem;
+			}
 		}
 		&--3 {
 			top: 2rem;
-			background-image: url(../../assests/photos/kitchen.jpg);
+			background-image: url(../assests/photos/kitchen.jpg);
 			z-index: 400;
+			@include respond(phone) {
+				top: 10rem;
+				left: -2rem;
+			}
 		}
 	}
 }

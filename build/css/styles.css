@@ -148,7 +148,7 @@ div#comparison figure div {
   height: 8.2rem;
   flex-direction: row;
   justify-content: center;
-  background-color: #bcdbf1;
+  background-image: linear-gradient(225deg, #bcdbf1 0%, #4db5ff 100%);
   border-bottom: 2px solid #022546; }
   @media (max-width: 37.5em) {
     .header__navbar {
@@ -316,7 +316,7 @@ div#comparison figure div {
   flex-direction: column;
   align-content: center;
   height: 50rem;
-  background-color: #bcdbf1;
+  background-image: linear-gradient(225deg, #bcdbf1 0%, #4db5ff 100%);
   border-top: 2px solid #022546; }
   .footer__top-container {
     display: flex;
@@ -381,7 +381,9 @@ div#comparison figure div {
   width: 100vw;
   height: 42rem;
   margin-top: 8.2rem;
-  background-image: url("../../assests/photos/pexels-mark-mccammon-2724749.jpg");
+  background-image: url("../assests/photos/pexels-mark-mccammon-2724749.jpg");
+  background-color: rgba(243, 203, 174, 0.3);
+  background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
   position: relative; }
@@ -396,7 +398,7 @@ div#comparison figure div {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgba(188, 219, 241, 0.6);
+      background-image: linear-gradient(to right bottom, rgba(188, 219, 241, 0.7) 0%, rgba(77, 181, 255, 0.7) 100%);
       padding: 5rem 3rem;
       box-shadow: 2px 2px 20px #022546; }
     .section-banner__heading--main {
@@ -431,7 +433,7 @@ div#comparison figure div {
     border: 1px solid #022546;
     box-shadow: 2px 2px 20px black;
     overflow: hidden; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.25em) {
       .section-testimonials__card {
         width: 52rem;
         height: 58.5rem; } }
@@ -447,7 +449,7 @@ div#comparison figure div {
       transform: translate(-50%, -50%);
       font-size: 1.5rem;
       text-align: center; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 56.25em) {
         .section-testimonials__quote--text {
           font-size: 2rem;
           font-weight: 100;
@@ -486,12 +488,12 @@ div#comparison figure div {
         color: #f7f7f7; }
     .section-testimonials__customer-details--name {
       font-size: 2rem; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 56.25em) {
         .section-testimonials__customer-details--name {
           font-size: 3rem; } }
     .section-testimonials__customer-details--package {
       font-size: 1.5rem; }
-      @media (max-width: 37.5em) {
+      @media (max-width: 56.25em) {
         .section-testimonials__customer-details--package {
           font-size: 2.5rem; } }
 
@@ -501,7 +503,7 @@ div#comparison figure div {
   margin: 10rem auto;
   padding: 5rem 0;
   font-family: "Oswald", "Raleway", Helvectica, sans-serif;
-  background-color: #bcdbf1;
+  background-image: linear-gradient(to right bottom, #bcdbf1 0%, rgba(77, 181, 255, 0.8) 100%);
   box-shadow: 0px 0px 10px black;
   color: #ed8b78; }
   .section-services__heading {
@@ -538,7 +540,7 @@ div#comparison figure div {
     font-size: 2rem;
     font-weight: 700;
     text-transform: uppercase; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.25em) {
       .section-services__services-title {
         font-size: 2.5rem; } }
     .section-services__services-title--left {
@@ -553,13 +555,13 @@ div#comparison figure div {
     flex-direction: column;
     justify-content: center;
     width: 25rem; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.25em) {
       .section-services__description-container {
         width: 33rem; } }
   .section-services__services-description {
     font-size: 1.5rem;
     color: #022546; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.25em) {
       .section-services__services-description {
         font-size: 2rem; } }
     .section-services__services-description--left {
@@ -578,7 +580,7 @@ div#comparison figure div {
     transition: all 0.2s ease-out;
     cursor: pointer;
     box-shadow: 0 0 25px black; }
-    @media (max-width: 37.5em) {
+    @media (max-width: 56.25em) {
       .section-services__icon-container {
         width: 15rem;
         height: 15rem; } }
@@ -680,3 +682,57 @@ div#comparison figure div {
         .section-comparison__img--3 {
           top: 10rem;
           left: -2rem; } }
+
+.section-contact {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  height: 50rem;
+  width: 100vw;
+  background-image: url("../../build/assests/photos/pexels-pixabay-534151.jpg");
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(247, 114, 171, 0.2);
+  background-blend-mode: overlay; }
+  @media (max-width: 56.25em) {
+    .section-contact {
+      background-attachment: scroll; } }
+  .section-contact__container {
+    position: relative;
+    height: 40rem;
+    width: 70vw;
+    background-image: linear-gradient(110deg, rgba(247, 114, 171, 0.8) 0%, rgba(247, 114, 171, 0.8) 40%, rgba(247, 247, 247, 0.9) 40%, #f7f7f7 100%); }
+    @media (max-width: 37.5em) {
+      .section-contact__container {
+        height: 50rem;
+        width: 100vw; } }
+  .section-contact__contact-us--container {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 40rem; }
+  .section-contact__contact-us--heading {
+    font-family: "Oswald", "Raleway", Helvectica, sans-serif;
+    font-size: 4rem; }
+  .section-contact__contact-us--sub-heading {
+    padding-top: 3rem;
+    font-family: "Playfair", "Times New Roman", Merriweather, serif;
+    font-size: 3rem; }
+  .section-contact__contact-form-input {
+    width: 30rem;
+    height: 2rem;
+    background-color: #bcdbf1; }
+  .section-contact__contact-form-label {
+    padding: 1rem; }
+  .section-contact__contact-form--container {
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    display: flex;
+    flex-direction: column; }
+  .section-contact__contact-form--question-input {
+    height: 10rem; }

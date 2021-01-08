@@ -3,7 +3,11 @@
 	flex-direction: column;
 	align-content: center;
 	height: 50rem;
-	background-color: $color-light-blue;
+	background-image: linear-gradient(
+		225deg,
+		rgba($color-light-blue, 1) 0%,
+		rgba($color-medium-blue, 1) 100%
+	);
 	border-top: 2px solid $color-dark-blue;
 	&__top-container {
 		display: flex;
